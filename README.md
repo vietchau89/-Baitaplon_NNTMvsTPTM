@@ -34,6 +34,29 @@ Thành phần	Mô tả
 
 - Khung gậy	Có thể sử dụng gậy gập truyền thống được cải tiến để tích hợp mạch và cảm biến.
 
+Chu trình hoạt động cơ bản:
+Khởi động hệ thống
+
+Arduino khởi tạo cảm biến VL53L0X.
+
+Kiểm tra kết nối với cảm biến. Nếu thất bại, dừng chương trình.
+
+Đo khoảng cách liên tục
+
+Trong vòng lặp loop(), cảm biến sẽ đo khoảng cách tới vật cản trước mặt (cập nhật mỗi 100ms).
+
+Khoảng cách được in ra Serial Monitor (chỉ dùng để kiểm tra/debug).
+
+Xử lý dữ liệu đo được
+
+Nếu khoảng cách nhỏ hơn 500mm → kích hoạt cảnh báo (buzzer/còi kêu).
+
+Nếu khoảng cách an toàn → tắt cảnh báo.
+
+Lặp lại quá trình đo và kiểm tra
+
+Hệ thống hoạt động liên tục, phản ứng nhanh với sự thay đổi môi trường phía trước.
+
 💡 Mục tiêu mở rộng trong tương lai
 Kết nối với điện thoại qua Bluetooth để chia sẻ vị trí.
 
